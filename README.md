@@ -1,3 +1,6 @@
+![Yamdb-app_workflow](https://github.com/maria-veret/yamdb_final/workflows/yamdb-workflow/badge.svg)
+
+
 # Проект Яндекс-Практикума YaMDb
 
 ## Описание
