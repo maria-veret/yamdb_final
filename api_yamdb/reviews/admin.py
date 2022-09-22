@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from api_yamdb.settings import EMPTY
 
 from .models import Category, Comment, Genre, Review, Title
