@@ -10,7 +10,7 @@ services:
       - ./.env
 
   web:
-    image: mari4veret/infra_actions:v1
+    image: mari4veret/yamdb_final:v1
     restart: always
     volumes:
       - static_value:/app/api_yamdb/static/
