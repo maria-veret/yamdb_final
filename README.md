@@ -1,4 +1,4 @@
-[![yamdb_workflow](https://github.com/maria-veret/yamdb_final/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/maria-veret/yamdb_final/workflows/yamdb_workflow.yml)
+![Alt](https://github.com/maria-veret/yamdb_final/workflows/yamdb_workflow.yml/badge.svg 'Actions Status')
 
 # Проект Яндекс-Практикума YaMDb
 
