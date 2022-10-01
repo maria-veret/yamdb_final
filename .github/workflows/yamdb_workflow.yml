@@ -44,7 +44,7 @@ jobs:
           uses: docker/build-push-action@v2
           with:
             push: true
-            context: ./api_yamdb\Dockerfile 
+            context: ./api_yamdb/Dockerfile
             tags: mari4veret/yamdb_final:latest
 
   deploy:
