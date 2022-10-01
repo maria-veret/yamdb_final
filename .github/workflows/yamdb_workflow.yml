@@ -58,8 +58,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
-          source: "./.env, nginx/default.conf, ./docker-compose.yaml"
-          target: "/home/yc-user/code"
           script: |
             sudo docker-compose stop
             sudo docker-compose rm web
