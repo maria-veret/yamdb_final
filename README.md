@@ -50,10 +50,12 @@ http://127.0.0.1:8000/redoc/
 Клонировать репозиторий:
 
 ```
-git clone https://github.com/maria-veret/infra_sp2.git
+git clone https://github.com/maria-veret/
+yamdb_final.git
 ```
 
-Создать файл .env в папке infra_sp2/infra/ с переменными окружения для работы с базой данных :
+Создать файл .env в папке 
+api_yamdb/infra/ с переменными окружения для работы с базой данных:
 
 ```
 DB_ENGINE=django.db.backends.<указываем, с какой БД работаем> 
@@ -62,7 +64,7 @@ POSTGRES_USER=<логин для подключения к базе данных
 POSTGRES_PASSWORD=<пароль для подключения к БД>
 DB_HOST=<название сервиса (контейнера)>
 DB_PORT=<порт для подключения к БД>
-```ъ
+```
 
 Запустить контейнеры:
 
@@ -98,6 +100,28 @@ docker-compose exec web python manage.py loaddata fixtures.json
 
 ```
 http://localhost/redoc/
+```
+
+## Подготовка репозитория на GitHub
+
+В репозитории на GitHub необходимо прописать Secrets - переменные доступа к вашим сервисам.
+Переменые прописаны в workflows/yamdb_workflow.yaml
+
+* DOCKER_PASSWORD, DOCKER_USERNAME - для загрузки и скачивания образа с DockerHub
+* USER, HOST, PASSPHRASE, SSH_KEY - для подключения к удаленному серверу
+* TELEGRAM_TO, TELEGRAM_TOKEN - для отправки сообщений в Telegram
+
+## Развертывание приложения
+
+После push в ветку main приложение пройдет тесты, обновит образ на DockerHub и сделает деплой на сервер.
+
+Подключение к серверу:
+```
+ssh mari4veret@51.250.77.21
+```
+Проверьте, работает ли приложение. Войдите в админку django:
+```
+http://51.250.77.21/admin/
 ```
 
 ## Разработчики
