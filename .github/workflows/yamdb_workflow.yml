@@ -59,7 +59,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: | 
-            script: |
+            sudo docker pull mari4veret/yamdb_final:latest
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
