@@ -43,8 +43,9 @@ jobs:
         - name: Push to Docker Hub
           uses: docker/build-push-action@v2
           with:
+            no-cache: true
             push: true
-            file: ./api_yamdb/Dockerfile
+            context: ./api_yamdb/
             tags: mari4veret/yamdb_final:latest
 
   deploy:
