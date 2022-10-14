@@ -46,7 +46,7 @@ jobs:
             no-cache: true
             push: true
             context: ./api_yamdb/
-            tags: mari4veret/yamdb_final:latest
+            tags: mari4veret/yamdb_final
 
   deploy:
       runs-on: ubuntu-latest
@@ -60,7 +60,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: | 
-            sudo docker pull mari4veret/yamdb_final:latest
+            sudo docker pull mari4veret/yamdb_final
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
